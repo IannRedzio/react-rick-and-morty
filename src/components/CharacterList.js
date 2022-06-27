@@ -25,7 +25,7 @@ const CharacterList = () => {
           {characters.map((character) => (
             <GridItem w="300px" bg="#00b1c9" borderRadius="10" mt={3} mb={3}>
               <Character
-                key={character.id}
+                key={character.id + 1}
                 character={character}
                 name={character.name}
                 image={character.image}
