@@ -23,15 +23,14 @@ const CharacterList = () => {
       <Flex justifyContent="center">
         <Grid
           templateColumns={{ base: "repeat(1, 1fr)", sm: "repeat(3, 1fr)" }}
-          gap={10}
+          gap={8}
         >
           {characters.map((character) => (
             <GridItem
-              w={{ base: "500px", sm: "300px" }}
+              w={{ base: "250px", sm: "300px" }}
               bg="#00b1c9"
               borderRadius="10"
-              mt={3}
-              mb={3}
+              mt={{ base: "25px", sm: "5" }}
             >
               <Character
                 key={character.id + 1}
