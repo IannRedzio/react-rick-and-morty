@@ -21,9 +21,18 @@ const CharacterList = () => {
     <>
       <NavPage page={page} setPage={setPage} />
       <Flex justifyContent="center">
-        <Grid templateColumns="repeat(3, 1fr)" gap={10}>
+        <Grid
+          templateColumns={{ base: "repeat(1, 1fr)", sm: "repeat(3, 1fr)" }}
+          gap={10}
+        >
           {characters.map((character) => (
-            <GridItem w="300px" bg="#00b1c9" borderRadius="10" mt={3} mb={3}>
+            <GridItem
+              w={{ base: "500px", sm: "300px" }}
+              bg="#00b1c9"
+              borderRadius="10"
+              mt={3}
+              mb={3}
+            >
               <Character
                 key={character.id + 1}
                 character={character}
